@@ -1,109 +1,71 @@
-# Welcome to React Router + Cloudflare Workers!
+# Revival Interactive - Outback Games Showcase
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/react-router-starter-template)
+Professional outback-themed React website for showcasing Revival Interactive games, updates, and community content.
 
-![React Router Starter Template Preview](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/bfdc2f85-e5c9-4c92-128b-3a6711249800/public)
+## What's included
 
-<!-- dash-content-start -->
+- Vite + React website
+- Outback / Aussie themed UI
+- Revival Interactive branding
+- Game showcase cards
+- Updates section
+- Community section
+- All provided image assets included under `public/images/assets/`
+- Selected images already wired into the site under `public/images/`
 
-A modern, production-ready template for building full-stack React applications using [React Router](https://reactrouter.com/) and the [Cloudflare Vite plugin](https://developers.cloudflare.com/workers/vite-plugin/).
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-- 🔎 Built-in Observability to monitor your Worker
-<!-- dash-content-end -->
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
-
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/react-router-starter-template
-```
-
-A live public deployment of this template is available at [https://react-router-starter-template.templates.workers.dev](https://react-router-starter-template.templates.workers.dev)
-
-### Installation
-
-Install the dependencies:
+## How to run locally
 
 ```bash
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open the local URL Vite gives you, usually:
 
-## Typegen
-
-Generate types for your Cloudflare bindings in `wrangler.json`:
-
-```sh
-npm run typegen
+```txt
+http://localhost:5173
 ```
 
-## Building for Production
-
-Create a production build:
+## Build for production
 
 ```bash
 npm run build
 ```
 
-## Previewing the Production Build
+The production files will be created in:
 
-Preview the production build locally:
-
-```bash
-npm run preview
+```txt
+dist/
 ```
 
-## Deployment
+## Where to change images
 
-If you don't have a Cloudflare account, [create one here](https://dash.cloudflare.com/sign-up)! Go to your [Workers dashboard](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages) to see your [free custom Cloudflare Workers subdomain](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/) on `*.workers.dev`.
+The site uses these image paths:
 
-Once that's done, you can build your app:
-
-```sh
-npm run build
+```txt
+public/images/revival-logo.png
+public/images/revival-banner-main.png
+public/images/outback-vehicle-sunset.png
+public/images/new-update-banner.png
+public/images/outback-legends.png
+public/images/community-hub.png
+public/images/premium-server.png
 ```
 
-And deploy it:
+All original uploaded/provided images are also saved in:
 
-```sh
-npm run deploy
+```txt
+public/images/assets/
 ```
 
-To deploy a preview URL:
+You can swap images by replacing the friendly named files above.
 
-```sh
-npx wrangler versions upload
+## Where to edit games / text
+
+Open:
+
+```txt
+src/App.jsx
 ```
 
-You can then promote a version to production after verification or roll it out progressively.
-
-```sh
-npx wrangler versions deploy
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Then edit the `games`, `updates`, and hero text near the top of the file.
